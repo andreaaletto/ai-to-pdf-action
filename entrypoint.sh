@@ -28,6 +28,8 @@ GH_CREATE_COMMIT=${10}
 
 if [ -z "$GS_INPUT_FILE" ] || [ ! -f "$GS_INPUT_FILE" ]; then
   error "Input file <${GS_INPUT_FILE}> is empty or doesn't exist."
+else
+  eval "cat GS_INPUT_FILE" 
 fi
 
 [ -f "$GS_OUTPUT_FILE" ] && [ -z "$OVERWRITE" ] && \
