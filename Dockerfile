@@ -2,7 +2,7 @@
 FROM alpine:3.16
 
 # Install ghostscript
-RUN apk --no-cache add ghostscript git git-lfs
+RUN apk --no-cache add ghostscript git
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
